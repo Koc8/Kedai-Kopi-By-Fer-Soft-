@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kedai Kopi</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome CDN (aman, semua ikon jalan) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Sidebar -->
+<aside id="sidebar" class="fixed top-0 left-0 h-screen w-16 bg-gray-900 transition-all duration-300 overflow-x-hidden">
+  <button id="toggleBtn" class="m-4 p-2 bg-yellow-600 rounded hover:bg-yellow-700">
+    <i class="fas fa-bars"></i>
+  </button>
+  <nav class="flex flex-col gap-2 mt-6">
+    <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-700 rounded">
+      <i class="fas fa-home"></i><span class="hidden whitespace-nowrap">Home</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-700 rounded">
+      <i class="fas fa-coffee"></i><span class="hidden whitespace-nowrap">Produk Kopi</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-700 rounded">
+      <i class="fas fa-info-circle"></i><span class="hidden whitespace-nowrap">Tentang Kami</span>
+    </a>
+    <a href="#" class="flex items-center gap-3 px-4 py-2 hover:bg-gray-700 rounded">
+      <i class="fas fa-envelope"></i><span class="hidden whitespace-nowrap">Kontak Email</span>
+    </a>
+  </nav>
+</aside>
+<div id="content" class="ml-16 transition-all duration-300">
+  <!-- Hero -->
+  <section class="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="absolute w-full h-full object-cover">
+      <source src="videos/background.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative z-10 p-6 rounded">
+      <h1 class="text-5xl md:text-6xl font-bold font-serif">
+        Selamat Datang di <span class="text-yellow-400">Kedai Kopi</span>
+      </h1>
+      <p class="mt-4 text-xl md:text-2xl text-red-500 font-semibold">
+        Tradisional warisan nenek moyang asli
+      </p>
+    </div>
+  </section>
+
+  <!-- Produk -->
+ <section class="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+  <div class="bg-white text-black p-6 rounded-xl shadow-lg text-center hover:scale-105 transition-transform duration-300">
+    <img src="images/produk1.jpg" class="rounded mb-4">
+    <h3 class="text-xl font-semibold">Espresso</h3>
+    <p class="text-yellow-600 font-bold">Rp 50.000</p>
+    <p class="text-sm text-red-500">+pajak</p>
+    <a href="#" class="mt-3 inline-block px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700">Beli Sekarang</a>
+  </div>
+  
+  <div class="bg-white text-black p-6 rounded-xl shadow-lg text-center hover:scale-105 transition-transform duration-300">
+    <img src="images/produk2.jpg" class="rounded mb-4">
+    <h3 class="text-xl font-semibold">Americano</h3>
+    <p class="text-yellow-600 font-bold">Rp 75.000</p>
+    <p class="text-sm text-red-500">+pajak</p>
+    <a href="#" class="mt-3 inline-block px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700">Beli Sekarang</a>
+  </div>
+  
+  <div class="bg-white text-black p-6 rounded-xl shadow-lg text-center hover:scale-105 transition-transform duration-300">
+    <img src="images/produk3.jpg" class="rounded mb-4">
+    <h3 class="text-xl font-semibold">Latte</h3>
+    <p class="text-yellow-600 font-bold">Rp 90.000</p>
+    <p class="text-sm text-red-500">+pajak</p>
+    <a href="#" class="mt-3 inline-block px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700">Beli Sekarang</a>
+  </div>
+  
+  <div class="bg-white text-black p-6 rounded-xl shadow-lg text-center hover:scale-105 transition-transform duration-300">
+    <img src="images/produk4.jpg" class="rounded mb-4">
+    <h3 class="text-xl font-semibold">Cappuccino</h3>
+    <p class="text-yellow-600 font-bold">Rp 85.000</p>
+    <p class="text-sm text-red-500">+pajak</p>
+    <a href="#" class="mt-3 inline-block px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700">Beli Sekarang</a>
+  </div>
+  
+  <div class="bg-white text-black p-6 rounded-xl shadow-lg text-center hover:scale-105 transition-transform duration-300">
+    <img src="images/produk5.jpg" class="rounded mb-4">
+    <h3 class="text-xl font-semibold">Mocha</h3>
+    <p class="text-yellow-600 font-bold">Rp 95.000</p>
+    <p class="text-sm text-red-500">+pajak</p>
+    <a href="#" class="mt-3 inline-block px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700">Beli Sekarang</a>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-center p-6">
+    &copy; 2025 Kedai Kopi. All rights reserved.
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const sidebar = document.getElementById('sidebar');
+    const navText = sidebar.querySelectorAll('span');
+
+    toggleBtn.addEventListener('click', () => {
+      if (sidebar.classList.contains('w-16')) {
+        sidebar.classList.remove('w-16');
+        sidebar.classList.add('w-52');
+        navText.forEach(span => span.classList.remove('hidden'));
+      } else {
+        sidebar.classList.remove('w-52');
+        sidebar.classList.add('w-16');
+        navText.forEach(span => span.classList.add('hidden'));
+      }
+    });
+  </script>
+</body>
+</html>
